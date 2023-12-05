@@ -21,8 +21,12 @@ LP-01;(LP) Amazing titles compimlation;02;25.00;25.44;12;02-music;fa-music;Amazi
 CD-02;(CD) Best of my music;01;10.00;10.18;10;02-music;fa-music;Best of my music;fa-compact-disc;#cc05ab;#ffffff
 LP-02;(LP) Best of my music;02;15.00;15.26;13;02-music;fa-music;Best of my music;fa-record-vinyl;#cc05ab;#2f2d2d
 
-TB-00;Tote Bag 'Marvelous Band' - Black;01;10.00;10.18;10;04-other;fa-store;Tote bag;fa-shopping-bag;#cccccc;#000000
-TB-01;Tote Bag 'Marvelous Band' - White;02;10.00;10.18;10;04-other;fa-store;Tote bag;fa-shopping-bag;#cccccc;#ffffff
+TB-00;Tote Bag 'Marvelous Band' - Black;01;10.00;10.18;10;04-other;fa-store;01. Tote bag;fa-shopping-bag;#cccccc;#000000
+TB-01;Tote Bag 'Marvelous Band' - White;02;10.00;10.18;10;04-other;fa-store;01. Tote bag;fa-shopping-bag;#999999;#ffffff
+SR-S-B-01;Sticker 'Marvelous Band' - Small/Black;01;0.50;0.51;50;04-other;fa-store;02. Stickers;fa-sticky-note;#cccccc;#000000
+SR-B-B-01;Sticker 'Marvelous Band' - Big/Black;01;1.00;0.51;50;04-other;fa-store;02. Stickers;fa-sticky-note;#cc9999;#000000
+SR-S-W-01;Sticker 'Marvelous Band' - Small/White;01;0.50;1.05;50;04-other;fa-store;02. Stickers;fa-sticky-note;#994444;#ffffff
+SR-B-W-01;Sticker 'Marvelous Band' - Big/White;01;1.00;1.05;50;04-other;fa-store;02. Stickers;fa-sticky-note;#999999;#ffffff
 
 TS-F-XS-WC-01;T-shirt Marvelous Band - White F/XS;02;20.00;20.35;4;03-tshirt;fa-tshirt;01. Marvelous Band - F/White;tshirt-w-xs.svg;#000000;#ffffff
 TS-F-S-WC-01;T-shirt Marvelous Band - White F/S;03;20.00;20.35;10;03-tshirt;fa-tshirt;01. Marvelous Band - F/White;tshirt-w-s.svg;#000000;#ffffff
