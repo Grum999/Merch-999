@@ -1,5 +1,7 @@
 # Merch-999
 
+<img src="./screenshots/merch-999.png" width="100" height="100">
+
 ## What Merch-999 is?
 **Merch-999** is a small application designed to be used on a tablet or smartphone to manage your merch.
 
@@ -24,10 +26,8 @@ Basically:
 
 Here some screenshots
 
-![A basket](./screenshots/basket.jpeg) ![Stock](./screenshots/stock.jpeg)
-
-![Sales](./screenshots/sales.jpeg) ![Tools](./screenshots/tools.jpeg)
-
+<img src="./screenshots/basket.jpeg" width="45%"> <img src="./screenshots/stock.jpeg" width="45%">
+<img src="./screenshots/sales.jpeg" width="45%"> <img src="./screenshots/tools.jpeg" width="45%">
 
 ## How does it cost? Is there a license?
 **Merch-999** is free and distributed under _GNU GPL v3 license_.
@@ -43,7 +43,7 @@ If you want to host your own **Merch-999**, you need a web-server to install it.
 
 > Following steps assume that you have a web-server and you know how manage it
 
-1) Download last release ZIP file
+1) Download last [release](https://github.com/Grum999/Merch/releases) ZIP file
 2) UNZIP content in your web server target directory, eventually `chmod +755` and that's all
 
 > You may have some additional settings to do on web-server side if you want HTTPS protocol, dedicated sub-domain, ...
@@ -72,7 +72,7 @@ Once the page is loaded, you can work offline, everything is managed within your
 ### Initialise stock
 To initialise stock, start to go on _Tools_ page and click/tap on <kbd>Import stock</kbd>
 
-![Tools](./screenshots/tools.jpeg)
+<img src="./screenshots/tools.jpeg" width="45%">
 
 Select `CSV` file to import
 > The CSV file must be available and readbale from your device
@@ -81,7 +81,7 @@ Select `CSV` file to import
 
 When loaded, go to _Stock_ page
 
-![Stock](./screenshots/stock.jpeg)
+<img src="./screenshots/stock.jpeg" width="45%">
 
 > Items for which current quantity is under defined limit (defined on page _Tools_) are highlighted in orange
 > Items for which stock is empty are highlighted in red
@@ -92,7 +92,7 @@ When loaded, go to _Stock_ page
 ### Manage basket
 When some stock is loaded and available, you can start to use basket.
 
-![Ongoing basket](./screenshots/basket-ongoing.jpeg)
+<img src="./screenshots/basket-ongoing.jpeg" width="45%">
 
 - Products are organized by types (`type label` in CSV file)
 - Products within types are grouped (`group label` in CSV file)
@@ -122,12 +122,12 @@ When customer pay in cash and provide exact amount, click/tap on blue 'thumbs up
 When customer pay in cash, amounts are provided for cash payment method.
 Set given amount provided by customer, cash to give back in updated automatically (no need for mental calculation anymore! 😅)
 
-![Ongoing basket, Cash payment mode](./screenshots/basket-cash-prices.jpeg)
+<img src="./screenshots/basket-cash-prices.jpeg" width="45%">
 
 When customer pay with a credit card, amounts are provided for credit card payment method.
 Also in this case, no need to provide amount as it's considered the paid amount is the expected amount...
 
-![Ongoing basket, Credit card payment mode](./screenshots/basket-cc-prices.jpeg)
+<img src="./screenshots/basket-cc-prices.jpeg" width="45%">
 
 > Why different amount for credit card and cash?
 > According to _electronic payment terminal_ used, you can have more or less fees on transactions and may not want to have to support them if fees are too high for you...
@@ -136,7 +136,7 @@ Also in this case, no need to provide amount as it's considered the paid amount 
 ### Manage sales
 You can check sales and available cash amount at any time in page _Sales_.
 
-![Ongoing basket, Credit card payment mode](./screenshots/sales-nfo.jpeg)
+<img src="./screenshots/sales-nfo.jpeg" width="45%">
 
 You have to set the initial cash with cash amount you have when starting the activity (you need some cash amount to be able to give back change to customer that don't have exact cash amount)
 The current cash amount is udpated on each sale paid in cash.
@@ -148,8 +148,7 @@ Total cash in sale transaction indicate total cash amount available after transa
 - Click/tap on left side trash icon to remove a sale
 - Click/tap on payment mode icon to get details about sale
 
-![Ongoing basket, Credit card payment mode](./screenshots/sales-nfo-details.jpeg)
-
+<img src="./screenshots/sales-nfo-details.jpeg" width="45%">
 
 ### Exporting results
 Results can be exported in MS Excel file format (`.xlsx`)
@@ -159,3 +158,26 @@ Exported file will contains 3 worksheets:
 - Sales
 - Sales details
 - Stock
+
+## Internationalization?
+Currently, no.
+**Merch-999** is hard-coded in English, EURO currency too.
+
+Maybe later but I don't think there's a real urgency.
+
+## Next steps?
+**Merch-999** is not designed to evolve in something too complex: don't expect to be able to manage stocks definition directly from interface, don't expect to get real-time and multi-users stock/sales management: this is an another app to built.
+
+For now maybe review CSV file import with an XLSX file import instead.
+Maybe add possibility of ODS file too (yes, Excel was a choice not because I use it but because probably users are most used to get XLSX files than ODS)
+
+## Bugs? Question?
+Yes there's minor bugs with UTF-8 encoding, avoid to use special characters for now.
+Any bug and/or question can be reported/asked in [issues](https://github.com/Grum999/Merch/issues) section.
+
+**Merch-999** is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY.
+
+## Database normal forms respect!? Where are they!? 🫣
+Yes, I know...
+Look, there's a flying cow behing you!!
+🏃‍♂️
