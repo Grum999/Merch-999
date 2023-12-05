@@ -21,13 +21,12 @@ Basically:
 - Use results in your prefered application (Excel?)
 
 ## What does it look like?
-Here Some screenshots
 
-![A basket](./screenshots/basket.jpeg)
-![Stock](./screenshots/stock.jpeg)
+Here some screenshots
 
-![Sales](./screenshots/sales.jpeg)
-![Tools](./screenshots/tools.jpeg)
+![A basket](./screenshots/basket.jpeg) ![Stock](./screenshots/stock.jpeg)
+
+![Sales](./screenshots/sales.jpeg) ![Tools](./screenshots/tools.jpeg)
 
 
 ## How does it cost? Is there a license?
