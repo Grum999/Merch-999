@@ -173,7 +173,7 @@ Maybe add possibility of ODS file too (yes, Excel was a choice not because I use
 
 ## Bugs? Question?
 Yes there's minor bugs with UTF-8 encoding, avoid to use special characters for now.
-Any bug and/or question can be reported/asked in [issues](https://github.com/Grum999/Merch/issues) section.
+Any bug and/or question can be reported/asked in [issues](https://github.com/Grum999/Merch-999/issues) section.
 
 **Merch-999** is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY.
 
