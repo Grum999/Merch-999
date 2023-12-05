@@ -1,0 +1,213 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<!--
+ ======================================================================================
+ Merch-999
+ Copyright (C) 2023 - Grum999
+ ======================================================================================
+ SPDX-License-Identifier: GPL-3.0-or-later
+
+ https://spdx.org/licenses/GPL-3.0-or-later.html
+ ======================================================================================
+ A small web app that let small bands to manage their merch transaction easily
+ during concerts
+ ======================================================================================
+-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="generator" content="handmade">
+    <meta name="description" content="Merch">
+    <meta name="robots" content="noai, noimageai, nonft">
+
+    <title>Merch</title>
+
+    <script lang="javascript" src='js/exceljs/exceljs.js'></script>
+    <script type='module' src='js/merch-999.js'></script>
+    <link type="text/css" href="css/fontawesome.min.css" rel="stylesheet">
+    <link type="text/css" href="css/solid.css" rel="stylesheet">
+    <link type="text/css" href="css/merch-999.css" rel="stylesheet">
+</head>
+<body>
+    <!-- nav bar / menu -->
+    <nav id="mainNavBar" class="merch-navbar">
+        <ul>
+            <li><a class="fa fa-shopping-basket" data-page="pageBasket">Basket</a></li>
+            <li><a class="fa fa-cube" data-page="pageStock">Stock</a></li>
+            <li><a class="fa fa-balance-scale" data-page="pageSales">Sales</a></li>
+            <li class='iconOnly iconRight'><a class="fa fa-wrench" data-page="pageTools"></a></li>
+        </ul>
+    </nav>
+
+    <main id="content" class="merch-container">
+        <article class="merch-page merch-page-active" id='pageBasket'>
+            <div class="merch-page-content">
+                <div id='basketContent' class='merch-page-products'>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td width="100%">
+                                    <input type="radio" id="paymentModeCC" name="paymentMode" value="cc" checked autocomplete="off"/>
+                                    <label for="paymentModeCC" class="fa fa-credit-card merch-payment-mode"></label>
+
+                                    <input type="radio" id="paymentModeCash" name="paymentMode" value="cash" autocomplete="off"/>
+                                    <label for="paymentModeCash" class="fa fa-money-bill-alt merch-payment-mode"></label>
+                                    <div class="merch-payment-mode-cash">
+                                        <input type="button" id="paymentBtnCashValidate" value="cashvalidate" class="hide">
+                                        <div class="merch-payment-btns-cash">
+                                            <label for="paymentBtnCashValidate" class="fa fa-thumbs-up merch-payment-btn merch-payment-btn-cashvalid1"></label>
+                                        </div>
+                                        <input type="text" inputmode="decimal" id="paymentCashAmount" value="" min="0" placeholder="0.00" autocomplete="off" list="paymentCashList"><span class="merch-amount"></span>
+                                        <datalist id="paymentCashList">
+                                            <option value="10.00"></option>
+                                            <option value="20.00"></option>
+                                            <option value="30.00"></option>
+                                            <option value="40.00"></option>
+                                            <option value="50.00"></option>
+                                            <option value="60.00"></option>
+                                            <option value="70.00"></option>
+                                            <option value="80.00"></option>
+                                            <option value="90.00"></option>
+                                            <option value="100.00"></option>
+                                        </datalist>
+                                        <span id="paymentCashAmountToGiveBack" class="merch-amount">0.00</span>
+                                    </div>
+                                </th>
+                                <td class="text-right">
+                                    <div id='paymentTotalAmount' class='merch-amount merch-total'>0.00</div>
+                                    <div class="merch-payment-btns">
+                                        <input type="button" id="paymentBtnValidate" value="validate" class="hide"><label for="paymentBtnValidate" class="fa fa-check-circle merch-payment-btn merch-payment-btn-validate"></label>
+                                        <input type="button" id="paymentBtnCancel" value="cancel" class="hide"><label for="paymentBtnCancel" class="fa fa-times-circle merch-payment-btn merch-payment-btn-cancel"></label>
+                                    </div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>Item</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody id='basketItems'>
+                        </tbody>
+                    </table>
+                </div>
+                <div id='basketProductsBar' class='merch-page-products-bar'>
+                </div>
+                <div id='basketProducts' class='merch-page-products'>
+                </div>
+            </div>
+        </article>
+
+        <article class="merch-page merch-page-notactive" id='pageStock'>
+            <div class="merch-page-content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Initial</th>
+                            <th>Current</th>
+                            <th>Sold</th>
+                        </tr>
+                    </thead>
+                    <tbody id='stockList'>
+                    </tbody>
+                </table>
+            </div>
+        </article>
+
+        <article class="merch-page merch-page-notactive" id='pageSales'>
+            <div class="merch-page-content">
+                <div class="merch-page-sales">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td colspan="2">Initial Cash</td>
+                                <td colspan="3"><input type="text" id='saleInitialCash' placeholder="0.00" autocomplete="on" value=""></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class='text-bold'>Current Cash</td>
+                                <td colspan="3" class='text-right text-bold'><span class="merch-amount-sales" id='saleCurrentCash'></span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><span class='labelSales'>Total Sales (<span id='saleCountTotalCash'></span>) - Cash</span></td>
+                                <td class='text-right'><span class="merch-amount-sales" id='saleTotalCashIn'></span></td>
+                                <td class='text-right'><span class="merch-amount-sales" id='saleTotalCashOut'></span></td>
+                                <td class='text-right'><span class="merch-amount-sales" id='saleTotalCash'></span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><span class='labelSales'>Total Sales (<span id='saleCountTotalCC'></span>) - Credit Card</span></td>
+                                <td colspan="3" class='text-right'><span class="merch-amount-sales" id='saleTotalCC'></span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><span class='labelSales'>Total Sales (<span id='saleCountTotal'></span>)</span></td>
+                                <td colspan="3" class='text-right'><span class="merch-amount-sales" id='saleTotal'></span></td>
+                            </tr>
+                            <tr>
+                                <th rowspan="2">Date</th>
+                                <th rowspan="2">Amount</th>
+                                <th colspan="3">Cash</th>
+                            </tr>
+                            <tr>
+                                <th>In</th>
+                                <th>Out</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody id='salesList'>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id='saleDetail' class='hide merch-backdrop'>
+                <div class='merch-detail-content'>
+                    <div class="merch-page-content">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td colspan="2">Sale from <span id='saleDetailDate'></span></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"><span id='saleDetailPaymentMode'></span></td>
+                                </tr>
+                                <tr>
+                                    <td>Total amount</td>
+                                    <td class='text-right'><span id='saleDetailAmount' class='merch-amount'></span></td>
+                                </tr>
+                                <tr>
+                                    <th width="80%">Item</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody id='saleDetailItems'>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article class="merch-page merch-page-notactive" id='pageTools'>
+            <input id='loadStockFromFile' type="file" class='merch-input-file' value=""/>
+            <input id='saveStockFromFile' type="button" class='merch-output-file' value="save"/>
+            <h2 class="merch-page-title">Tools</h2>
+            <label for="loadStockFromFile" class="fa fa-folder-open merch-input-file">Import stock</label>
+            <label for="saveStockFromFile" class="fa fa-download merch-output-file">Export stock/sales</label>
+            <div class='merch-setup'>
+                <span>
+                    <input type="text" id='setupExportFilename' autocomplete="on" value="">.xlsx
+                </span>
+            </div>
+            <h2 class="merch-page-title">Stock</h2>
+            <div class='merch-setup'>
+                <span>Low limit alert</span>
+                <span class='text-right'>
+                    <input type="number" id='setupStockLowLimit' autocomplete="on" value="4" min="1" size="3">
+                </span>
+            </div>
+            
+        </article>
+    </main>
+</body>
+</html>
+
+
+

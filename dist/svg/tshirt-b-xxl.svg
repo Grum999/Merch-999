@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 800 800"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="tshirt-b-xxl.svg"
+   width="800"
+   height="800"
+   inkscape:version="1.3-beta (cedbd6c, 2023-05-28)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <rect
+       x="-603.04184"
+       y="-495.92691"
+       width="1532.0498"
+       height="1632.9298"
+       id="rect2" />
+    <rect
+       x="194.46504"
+       y="-548.4224"
+       width="549.72617"
+       height="327.24656"
+       id="rect1" />
+  </defs>
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#808080"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.65186406"
+     inkscape:cx="289.93775"
+     inkscape:cy="352.8343"
+     inkscape:current-layer="svg1" />
+  <path
+     d="M 788.97078,200.6514 545.62802,80.04238 c -25.12168,34.7454 -80.73931,58.99219 -145.60572,58.99219 -64.86641,0 -120.48404,-24.24679 -145.60571,-58.99219 L 11.073828,200.6514 c -9.8736927,4.99934 -13.873163,16.99775 -8.9988086,26.87145 L 73.565551,370.62889 c 4.999337,9.87369 16.997747,13.87316 26.871429,8.99881 l 70.74063,-34.62042 c 13.24825,-6.49914 28.7462,3.12459 28.7462,17.99762 v 316.95802 c 0,22.12207 17.87263,39.9947 39.9947,39.9947 h 319.95762 c 22.12207,0 39.9947,-17.87263 39.9947,-39.9947 v -317.083 c 0,-14.74805 15.49795,-24.49676 28.74619,-17.99762 l 70.74063,34.62041 c 9.8737,4.99934 21.87211,0.99987 26.87144,-8.9988 l 71.61552,-142.98106 c 4.99931,-9.8737 0.99987,-21.99709 -8.87383,-26.87145 z"
+     id="path1"
+     style="fill:#000000;stroke-width:1" />
+  <path
+     d="m 295.24004,-397.00839 h -25.48626 l -23.81504,-41.2794 -23.73147,41.2794 H 196.721 l 36.59995,-63.33964 -35.59721,-61.41772 h 25.48627 l 22.72873,39.69173 22.8123,-39.69173 h 25.48626 l -35.43008,61.41772 z m 103.03136,0 h -25.48627 l -23.81503,-41.2794 -23.73147,41.2794 h -25.48627 l 36.59995,-63.33964 -35.59721,-61.41772 h 25.48627 l 22.72873,39.69173 22.8123,-39.69173 h 25.48626 l -35.43009,61.41772 z m 21.0575,0 v -124.75736 h 24.65065 v 103.03136 h 52.72732 v 21.726 z"
+     id="text1"
+     style="font-weight:bold;font-size:171.134px;line-height:1.25;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono, Bold';letter-spacing:0px;word-spacing:0px;white-space:pre;stroke-width:0.654421;fill:#ffffff"
+     transform="matrix(1.0406199,0,0,2.2438515,39.202576,1430.6089)"
+     aria-label="XXL" />
+  <text
+     xml:space="preserve"
+     id="text2"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:Rye;-inkscape-font-specification:Rye;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect2);display:inline;fill:#000000;fill-opacity:1;stroke:none" />
+</svg>
+<!--
+Font Awesome Free 5.2.0 by @fontawesome - https://fontawesome.com
+License - https://fontawesome.com/license (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+-->
+

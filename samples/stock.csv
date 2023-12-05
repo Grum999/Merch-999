@@ -1,0 +1,54 @@
+# Example file of stock to load
+# Lines starting with a hash # and empty lines are ignored
+# Each line contains the following columns (semi-coljumn separated)
+# - ref:                 internal product reference; free text value
+# - label:               product label; free text value
+# - sort order:          value used to sort product (sorted by type, group, sort order); integer number
+# - price cash:          price applied to product if paid in cash; decimal number
+# - price cc:            price applied to product if paid with a credit card (allows to apply different prices if you want to let to buyer paid CC fees); decimal number
+# - initial quantity:    initial quantity for product in stock; integer number
+# - type label:          type of product - products are grouped by their type; free text
+# - type icon:           reference to a font-awesome icon for type; text
+# - group label:         group for product label (allows to group same t-shirt with different size for example); free text 
+# - group icon:          icon to use for group, can be a reference to font-awesome icon, or a valid SVG icon; text
+# - group bg color:      background color for gorup icon; text (#rrggbb)
+# - group fg color:      foreground color for group icon (if font-awesome ico, ignored for SVG icons); text (#rrggbb)
+
+# ref;label;sort order;price cash;price CC;initial quantity;type label;type icon;group label;group icon;group bg color;group fg color
+CD-01;(CD) Amazing titles compilation;01;15.00;15.26;10;02-music;fa-music;Amazing titles compilation;fa-compact-disc;#e9c3e2;#ffffff
+LP-01;(LP) Amazing titles compimlation;02;25.00;25.44;12;02-music;fa-music;Amazing titles compilation;fa-record-vinyl;#e9c3e2;#2f2d2d
+
+CD-02;(CD) Best of my music;01;10.00;10.18;10;02-music;fa-music;Best of my music;fa-compact-disc;#cc05ab;#ffffff
+LP-02;(LP) Best of my music;02;15.00;15.26;13;02-music;fa-music;Best of my music;fa-record-vinyl;#cc05ab;#2f2d2d
+
+TB-00;Tote Bag 'Marvelous Band' - Black;01;10.00;10.18;10;04-other;fa-store;Tote bag;fa-shopping-bag;#cccccc;#000000
+TB-01;Tote Bag 'Marvelous Band' - White;02;10.00;10.18;10;04-other;fa-store;Tote bag;fa-shopping-bag;#cccccc;#ffffff
+
+TS-F-XS-WC-01;T-shirt Marvelous Band - White F/XS;02;20.00;20.35;4;03-tshirt;fa-tshirt;01. Marvelous Band - F/White;tshirt-w-xs.svg;#000000;#ffffff
+TS-F-S-WC-01;T-shirt Marvelous Band - White F/S;03;20.00;20.35;10;03-tshirt;fa-tshirt;01. Marvelous Band - F/White;tshirt-w-s.svg;#000000;#ffffff
+TS-F-M-WC-01;T-shirt Marvelous Band - White F/M;04;20.00;20.35;10;03-tshirt;fa-tshirt;01. Marvelous Band - F/White;tshirt-w-m.svg;#000000;#ffffff
+TS-F-L-WC-01;T-shirt Marvelous Band - White F/L;05;20.00;20.35;8;03-tshirt;fa-tshirt;01. Marvelous Band - F/White;tshirt-w-l.svg;#000000;#ffffff
+TS-F-XL-WC-01;T-shirt Marvelous Band - White F/XL;06;20.00;20.35;4;03-tshirt;fa-tshirt;01. Marvelous Band - F/White;tshirt-w-xl.svg;#000000;#ffffff
+
+TS-F-XXS-BC-01;T-shirt Marvelous Band - Black F/XXS;01;20.00;20.35;1;03-tshirt;fa-tshirt;02. Marvelous Band - F/Black;tshirt-b-xxs.svg;#ffffff;#ffffff
+TS-F-XS-BC-01;T-shirt Marvelous Band - Black F/XS;02;20.00;20.35;4;03-tshirt;fa-tshirt;02. Marvelous Band - F/Black;tshirt-b-xs.svg;#ffffff;#ffffff
+TS-F-S-BC-01;T-shirt Marvelous Band - Black F/S;03;20.00;20.35;10;03-tshirt;fa-tshirt;02. Marvelous Band - F/Black;tshirt-b-s.svg;#ffffff;#ffffff
+TS-F-M-BC-01;T-shirt Marvelous Band - Black F/M;04;20.00;20.35;10;03-tshirt;fa-tshirt;02. Marvelous Band - F/Black;tshirt-b-m.svg;#ffffff;#ffffff
+TS-F-L-BC-01;T-shirt Marvelous Band - Black F/L;05;20.00;20.35;8;03-tshirt;fa-tshirt;02. Marvelous Band - F/Black;tshirt-b-l.svg;#ffffff;#ffffff
+TS-F-XL-BC-01;T-shirt Marvelous Band - Black F/XL;06;20.00;20.35;4;03-tshirt;fa-tshirt;02. Marvelous Band - F/Black;tshirt-b-xl.svg;#ffffff;#ffffff
+
+TS-M-S-WC-01;T-shirt Marvelous Band - White M/S;03;20.00;20.35;8;03-tshirt;fa-tshirt;03. Marvelous Band - M/White;tshirt-w-s.svg;#000000;#ffffff
+TS-M-M-WC-01;T-shirt Marvelous Band - White M/M;04;20.00;20.35;10;03-tshirt;fa-tshirt;03. Marvelous Band - M/White;tshirt-w-m.svg;#000000;#ffffff
+TS-M-L-WC-01;T-shirt Marvelous Band - White M/L;05;20.00;20.35;10;03-tshirt;fa-tshirt;03. Marvelous Band - M/White;tshirt-w-l.svg;#000000;#ffffff
+TS-M-XL-WC-01;T-shirt Marvelous Band - White M/XL;06;20.00;20.35;10;03-tshirt;fa-tshirt;03. Marvelous Band - M/White;tshirt-w-xl.svg;#000000;#ffffff
+TS-M-XXL-WC-01;T-shirt Marvelous Band - White M/XXL;07;20.00;20.35;8;03-tshirt;fa-tshirt;03. Marvelous Band - M/White;tshirt-w-xxl.svg;#000000;#ffffff
+
+TS-M-XS-BC-01;T-shirt Marvelous Band - Black M/XS;02;20.00;20.35;4;03-tshirt;fa-tshirt;04. Marvelous Band - M/Black;tshirt-b-xs.svg;#ffffff;#ffffff
+TS-M-S-BC-01;T-shirt Marvelous Band - Black M/S;03;20.00;20.35;10;03-tshirt;fa-tshirt;04. Marvelous Band - M/Black;tshirt-b-s.svg;#ffffff;#ffffff
+TS-M-M-BC-01;T-shirt Marvelous Band - Black M/M;04;20.00;20.35;10;03-tshirt;fa-tshirt;04. Marvelous Band - M/Black;tshirt-b-m.svg;#ffffff;#ffffff
+TS-M-L-BC-01;T-shirt Marvelous Band - Black M/L;05;20.00;20.35;8;03-tshirt;fa-tshirt;04. Marvelous Band - M/Black;tshirt-b-l.svg;#ffffff;#ffffff
+TS-M-XL-BC-01;T-shirt Marvelous Band - Black M/XL;06;20.00;20.35;4;03-tshirt;fa-tshirt;04. Marvelous Band - M/Black;tshirt-b-xl.svg;#ffffff;#ffffff
+TS-M-XXL-BC-01;T-shirt Marvelous Band - Black M/XXL;07;20.00;20.35;2;03-tshirt;fa-tshirt;04. Marvelous Band - M/Black;tshirt-b-xxl.svg;#ffffff;#ffffff
+
+TE-ADULT;Ticket ADULT;00;10.00;10.18;999;01-ticket;fa-ticket-alt;Entry;fa-ticket-alt;#4865ff;#ffebaf
+TE-CHILD;Ticket CHILD;00;8.00;8.14;999;01-ticket;fa-ticket-alt;Entry;fa-ticket-alt;#48c3ff;#424ded
