@@ -1434,11 +1434,13 @@ class Pages {
 
                                 if(basketItem.basketEntryId == basketEntryId) {
                                     let item = basketProducts.querySelector(`div[data-ref='${basketItem.ref}']`);
-                                    this.basketAmountCash -= basketItem.priceCash;
-                                    this.basketAmountCc -= basketItem.priceCC;
+                                    if(basketItem.isGift==false) {
+                                        this.basketAmountCash -= basketItem.priceCash;
+                                        this.basketAmountCc -= basketItem.priceCC;
 
-                                    this.basketAmountCash = Math.round(this.basketAmountCash * 100) / 100;
-                                    this.basketAmountCc = Math.round(this.basketAmountCc * 100) / 100;
+                                        this.basketAmountCash = Math.round(this.basketAmountCash * 100) / 100;
+                                        this.basketAmountCc = Math.round(this.basketAmountCc * 100) / 100;
+                                    }
 
                                     this.basketItems.splice(index, 1);
 
