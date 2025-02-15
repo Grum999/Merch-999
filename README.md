@@ -1,3 +1,6 @@
+> NOTE: has been moved on codeberg!
+> https://codeberg.org/Grum999/Merch-999
+
 # Merch-999
 
 <img src="./screenshots/merch-999.png" width="100" height="100">
